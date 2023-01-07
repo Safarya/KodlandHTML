@@ -1,7 +1,11 @@
  /* @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');  */
  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;700;900&display=swap');
 /*Not sure what font you used, this is the closest I could find*/
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     height: fit-content;
     width: 100%;
@@ -31,6 +35,9 @@ nav > a {
     padding-left: 3rem;
     text-decoration: none;
     color: black;
+}
+nav > a:hover {
+    color: rgba(203, 244, 240)
 }
 
 /******************-MAIN-******************/
@@ -120,7 +127,7 @@ h1{
 
 .div-img > img{
     padding-left: 4rem;
-    height: 250px;
+    height: 200px;
     width: 275px;
 }
 
@@ -137,4 +144,8 @@ h1{
 .footer > a{
     color:white;
     text-decoration: none;
+}
+
+.footer > a:hover{
+    color:rgba(255, 191, 105);
 }
