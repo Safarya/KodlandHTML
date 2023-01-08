@@ -27,19 +27,82 @@ body{
     font-weight: bold;
 }
 
-nav{
-    padding-right: 3rem;;
+li{
+    list-style: none;
 }
-
-nav > a {
-    padding-left: 3rem;
+a{
     text-decoration: none;
     color: black;
 }
-nav > a:hover {
+.navbar{
+    display: flex;
+    justify-content: right;
+    align-items:center;
+    padding: 0 3rem;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+.link{
+    transition: 0.7s ease;
+}
+.link:hover{
     color: rgba(203, 244, 240)
 }
+.hamburger{
+    display: none; 
+    cursor: pointer;
+    padding-right: 4rem; 
+}
+.bar{
+    display: block;
+    width: 2rem;
+    height: 0.5rem;
+    margin: 0.25rem ; 
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
 
+@media(max-width:1000px){
+    .hamburger{
+        display:block;
+    }
+    .hamburger .active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger .active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger .active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        transition: 0.3s;
+        background-color: rgba(255, 191, 105);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .menu.active{
+        left: 0;
+    }
+
+    .item{
+        margin: 16px 0;
+    }
+    
+} */
 /******************-MAIN-******************/
 
 .grid {
@@ -92,6 +155,7 @@ h1{
     
 }
 #wrapper{
+    margin-top: 1rem;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -99,6 +163,7 @@ h1{
     font-weight:600;
 }
 #wrapper > .types{
+    margin-top: 1rem;
     float:left;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -110,6 +175,7 @@ h1{
 }
 
 #wrapper > .types button{
+    margin-top: 1rem;
     border: 0px;
     padding-left: 2rem;
     padding-right: 2rem;
